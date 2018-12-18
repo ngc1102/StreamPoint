@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+h1 {
+    font-size: 20px;
+}
+h4 {
+    display: inline-block;
+}
+.body-container {
+    display: grid;
+    /*grid-template-columns: minmax(auto, 1024px);*/
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 120px auto;
+    grid-template-areas: "header header"
+                         "menu content";
+}
+.item {
+}
+.item:nth-of-type(1) {
+    grid-column: 1/span 3;
+}
+.item:nth-of-type(5) {
+    grid-column: 1/span 3;
+}
+.item:nth-of-type(9) {
+    grid-column: 1/span 3;
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 200px 400px 200px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo-container {
+    display: grid;
+    grid-template-columns: 50px 100%;
+    align-items: center;
+}
+.logo-container img {
+    max-width: 100px;
+}
+.logo-container span {
+    font-size: 21px;
+}
+.search-container {
+   display: inline-block;
+}
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dbdbe2;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.user-container {
+    display: grid;
+    grid-template-columns: 120px 50px 10px;
+    align-items: center;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #e85858;
+    color: white;
+    display: grid;
+    grid-template-rows: 80px 80px 80px 300px;
+    align-items: center;
+    justify-content: center;
+    grid-row-gap: 15px;
+
+}
+.menu-item img {
+    width: 50px;
+}
+.menu-item p {
+    margin: 0;
+}
+
+.content {
+    grid-area: content;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+    grid-row-gap: 20px;
+}
+
+.post {
+    display: grid;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+}
+.post-img {
+    margin: 0;
+}
+.post-img img {
+    width: 300px;
+}
+
+.post-img2 img {
+    width: 200px;
+}
+.post-img3 img {
+    width: 150px;
+}
+
+.post-overlay {
+    background: rgba(248, 88, 88, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.post:hover .post-overlay {
+    display: flex;
+}
+
+.stream-name {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
